@@ -16,6 +16,7 @@ RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" \
     | tee /etc/apt/sources.list.d/coral-edgetpu.list
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 RUN apt-get update
+# RUN apt-get install -y python3-edgetpu python3-opencv
 RUN apt-get install -y libedgetpu1-std python3-edgetpu python3-opencv
 
 RUN wget https://dl.google.com/coral/python/tflite_runtime-2.1.0-cp36-cp36m-linux_x86_64.whl
